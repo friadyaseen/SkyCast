@@ -76,7 +76,7 @@ function SetWeakTemp(weatherFor) {
       document.getElementById('name' + j).innerText = Getdate(i, weatherFor);
       document.getElementById('temp' + j).innerText = Math.round(weatherFor.list[i].main.temp - 273);
       document.getElementById('weather' + j).innerText = weatherFor.list[i].weather[0].main;
-      document.getElementById("weathericon" + j).src = "./icons/" + GetIcon(i, weatherFor) + ".svg";
+      document.getElementById("weathericon" + j).src = "icons/" + GetIcon(i, weatherFor) + ".svg";
       j++;
     }
   }
