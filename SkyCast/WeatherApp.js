@@ -53,8 +53,8 @@ function GetCurrentWeather(currentweather) {
   document.getElementById("CurrentTemp").innerText = tempnaw;
   document.getElementById("CurrentTemp1").innerText = tempnaw;
 
-  document.getElementById("CurrentWeathericon").src = "/icons/" + currentweather.weather[0].icon.replace(/(n)|(d)/, '') + ".svg";
-  document.getElementById("CurrentWeathericon1").src = "/icons/" + currentweather.weather[0].icon.replace(/(n)|(d)/, '') + ".svg";
+  document.getElementById("CurrentWeathericon").src = "./icons/" + currentweather.weather[0].icon.replace(/(n)|(d)/, '') + ".svg";
+  document.getElementById("CurrentWeathericon1").src = "./icons/" + currentweather.weather[0].icon.replace(/(n)|(d)/, '') + ".svg";
 
   document.getElementById('weather').innerText = currentweather.weather[0].main;
 
@@ -76,7 +76,7 @@ function SetWeakTemp(weatherFor) {
       document.getElementById('name' + j).innerText = Getdate(i, weatherFor);
       document.getElementById('temp' + j).innerText = Math.round(weatherFor.list[i].main.temp - 273);
       document.getElementById('weather' + j).innerText = weatherFor.list[i].weather[0].main;
-      document.getElementById("weathericon" + j).src = "/icons/" + GetIcon(i, weatherFor) + ".svg";
+      document.getElementById("weathericon" + j).src = "./icons/" + GetIcon(i, weatherFor) + ".svg";
       j++;
     }
   }
