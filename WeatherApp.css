@@ -1,27 +1,36 @@
+:root {
+    --backcolor: (231, 63, 98);
+}
+
 body {
     margin: 0;
     padding: 0;
     background-image: url(./icons/background.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: #260450;
 }
 
 p {
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
+    color: white;
 }
 
 hr {
     margin: 5px;
-    border-color: rgb(86, 113, 92);
+    border-color: rgb(231, 63, 98);
+}
+
+* {
+    box-sizing: border-box;
 }
 
 .header {
-    backdrop-filter: blur(10px);
     width: 100%;
     height: 48px;
-    box-shadow: 0px 1px 10px;
+    border-bottom: 3px solid rgb(231, 63, 98);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,13 +56,29 @@ hr {
 
 .weakTemp {
     backdrop-filter: blur(4px);
-    display: flex;
-    justify-content: space-between;
-    width: 800px;
+    display: grid;
+    grid-template-columns: 440px 5px 440px;
+    grid-template-rows: 170px;
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+    width: 885px;
     padding: 10px 20px;
     margin-top: 230px;
     margin-left: 30px;
-    box-shadow: 3px 3px 15px;
+    border: 3px solid rgb(231, 63, 98);
+    border-radius: 15px;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 140px 5px 140px 5px 140px;
+    grid-template-rows: 130px;
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+}
+
+.hr {
+    max-height: 130px;
 }
 
 .logodiv {
@@ -67,11 +92,11 @@ hr {
 }
 
 .sky {
-    color: #54cdfe;
+    color: rgb(231, 63, 98);
 }
 
 .cast {
-    color: #8ffcdc;
+    color: #260450;
 }
 
 .day {
@@ -131,7 +156,8 @@ hr {
 
 .blur {
     backdrop-filter: blur(4px);
-    box-shadow: 3px 3px 15px;
+    border: 3px solid rgb(231, 63, 98);
+    border-radius: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -156,15 +182,20 @@ hr {
     padding-top: 50px;
 }
 
+.degreea {
+    color: black;
+}
+
 .country {
     font-size: 100px;
     font-weight: 700;
-    color: none;
+    color: black;
 }
 
 .city {
     font-size: 50px;
     font-weight: 500;
+    color: black;
 }
 
 .tempdegree {
@@ -224,7 +255,7 @@ hr {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #54cdfe;
+    background-color: #260450;
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -242,11 +273,11 @@ hr {
 }
 
 input:checked+.slider {
-    background-color: #8ffcdc;
+    background-color: rgb(231, 63, 98);
 }
 
 input:focus+.slider {
-    box-shadow: 0 0 1px #8ffcdc;
+    box-shadow: 0 0 1px rgb(231, 63, 98);
 }
 
 input:checked+.slider:before {
@@ -262,4 +293,93 @@ input:checked+.slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-image: url(./icons/backgroundphone.png);
+        background-color: #260450;
+    }
+
+    .CurrentWeather {
+        height: 150px;
+        width: 100px;
+        padding-right: 0;
+        position: absolute;
+        top: 150px;
+        right: 40px;
+    }
+
+    .weakTemp {
+        margin-left: 8px;
+        display: grid;
+        grid-template-columns: 355px;
+        grid-template-rows: 130px 5px 130px;
+        grid-column-gap: 0px;
+        grid-row-gap: 10px;
+        width: 400px;
+    }
+
+    .parent {
+        display: grid;
+        grid-template-columns: 120px 5px 120px 5px 120px;
+        grid-template-rows: 130px;
+        grid-column-gap: 0px;
+        grid-row-gap: 10px;
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    .dayicon {
+        width: 50px;
+    }
+
+    .xem {
+        position: absolute;
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        overflow: hidden;
+        top: -65px;
+        bottom: -65px;
+        right: -25px;
+        left: -25px;
+        z-index: -1;
+    }
+
+    .WeatherIcon {
+        width: 150px;
+        height: 150px;
+    }
+
+    .InfoDiv {
+        flex-direction: column;
+        color: black;
+        font-size: 16px;
+    }
+
+    .InfoDiv>hr {
+        display: none;
+    }
+
+    .CurrentTempc,
+    .hh,
+    .feel>p,
+    .info {
+        color: black;
+    }
+
+    .TempDiv>p {
+        font-size: 34px;
+    }
+
+    .blur {
+        backdrop-filter: none;
+        border: 3px solid #260450;
+    }
+
+    .feel {
+        margin: 0;
+    }
 }
