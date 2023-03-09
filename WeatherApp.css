@@ -306,18 +306,29 @@ input:checked+.slider:before {
         width: 100px;
         padding-right: 0;
         position: absolute;
-        top: 150px;
-        right: 40px;
+        top: 20%;
+        right: 10%;
     }
 
     .weakTemp {
-        margin-left: 8px;
+        backdrop-filter: none;
+        position: absolute;
+
+        left: 5%;
+        right: 5%;
+        top: 60%;
+
+        margin: 0;
+        padding: 10px 10px;
         display: grid;
-        grid-template-columns: 355px;
+        grid-template-columns: 350px;
         grid-template-rows: 130px 5px 130px;
         grid-column-gap: 0px;
         grid-row-gap: 10px;
-        width: 400px;
+        min-width: 370px;
+        max-height: 311px;
+        max-width: 372px;
+        width: auto;
     }
 
     .parent {
@@ -346,6 +357,18 @@ input:checked+.slider:before {
         right: -25px;
         left: -25px;
         z-index: -1;
+    }
+
+    .xem1 {
+        position: absolute;
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        overflow: hidden;
+        z-index: -1;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 0;
     }
 
     .WeatherIcon {
@@ -381,5 +404,18 @@ input:checked+.slider:before {
 
     .feel {
         margin: 0;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        overflow: hidden;
+    }
+    .weakTemp {
+        overflow-x: hidden;
+        bottom: 0.5%;
+        left: 0.5%;
+        right: 0.5%;
+        grid-template-columns: 350px;
     }
 }

@@ -13,7 +13,7 @@ if (navigator.geolocation) {
 function GetWeather(positon) {
   lat = Math.round(positon.coords.latitude);
   lon = Math.round(positon.coords.longitude);
-  console.log(positon.coords.latitude, positon.coords.longitude)
+
   fetch("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=d683d4ce2bb76c53f54bda835a48260c")
     .then(response =>
       response.json().then(data => ({
