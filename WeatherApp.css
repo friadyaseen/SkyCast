@@ -36,6 +36,10 @@ hr {
     justify-content: center;
 }
 
+.xem1 {
+    postition: absolute;
+}
+
 .header1 {
     width: 98%;
     display: flex;
