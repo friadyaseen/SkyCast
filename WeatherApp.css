@@ -1,61 +1,62 @@
 :root {
-    --backcolor: (231, 63, 98);
+    --pink: #e73f62;
+    --purple: #260450;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-image: url(./icons/background.png);
+    background-image: url(icons/background.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #260450;
+    background-color: var(--purple)
 }
 
 p {
     margin: 0;
     padding: 0;
-    font-family: 'Lato', sans-serif;
-    color: white;
+    font-family: Lato, sans-serif;
+    color: #fff
 }
 
 hr {
     margin: 5px;
-    border-color: rgb(231, 63, 98);
+    border-color: var(--pink)
 }
 
 * {
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 .header {
     width: 100%;
     height: 48px;
-    border-bottom: 3px solid rgb(231, 63, 98);
+    border-bottom: 3px solid var(--pink);
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-.xem1 {
-    position: absolute;
+    justify-content: center
 }
 
 .header1 {
     width: 98%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .webname {
     font-size: 35px;
-    font-weight: 700;
+    font-weight: 700
+}
+
+.xem1 {
+    position: absolute
 }
 
 .main {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center
 }
 
 .weakTemp {
@@ -63,83 +64,83 @@ hr {
     display: grid;
     grid-template-columns: 440px 5px 440px;
     grid-template-rows: 170px;
-    grid-column-gap: 0px;
+    grid-column-gap: 0;
     grid-row-gap: 10px;
     width: 885px;
     padding: 10px 20px;
-    margin-top: 230px;
+    margin-top: 160px;
     margin-left: 30px;
-    border: 3px solid rgb(231, 63, 98);
-    border-radius: 15px;
+    border: 3px solid var(--pink);
+    border-radius: 15px
 }
 
 .parent {
     display: grid;
     grid-template-columns: 140px 5px 140px 5px 140px;
     grid-template-rows: 130px;
-    grid-column-gap: 0px;
-    grid-row-gap: 10px;
+    grid-column-gap: 0;
+    grid-row-gap: 10px
 }
 
 .hr {
-    max-height: 130px;
+    max-height: 130px
 }
 
 .logodiv {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 .logo {
-    width: 50px;
+    width: 50px
 }
 
 .sky {
-    color: rgb(231, 63, 98);
+    color: var(--pink)
 }
 
 .cast {
-    color: #260450;
+    color: var(--purple)
 }
 
 .day {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column
 }
 
 .name {
-    font-size: 24px;
+    font-size: 24px
 }
 
 .temp {
-    font-size: 30px;
+    font-size: 30px
 }
 
 .weather {
-    font-size: 20px;
+    font-size: 20px
 }
 
 .dayicon {
-    width: 90px;
+    width: 90px
 }
 
 .dayinfo {
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column
 }
 
 .TempDiv {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .hh {
-    font-size: 40px;
+    font-size: 40px
 }
 
 .CurrentWeather {
@@ -148,110 +149,105 @@ hr {
     padding-right: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
-
 
 .weatherinfo {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 .blur {
     backdrop-filter: blur(4px);
-    border: 3px solid rgb(231, 63, 98);
+    border: 3px solid var(--pink);
     border-radius: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column
 }
 
 .WeatherIcon {
     width: 365px;
     padding: 0;
-    margin: 0;
+    margin: 0
 }
-
 
 .CurrentTempc {
     font-size: 50px;
     margin: 0;
-    padding: 0;
+    padding: 0
 }
 
 .locationDiv {
     padding-left: 20px;
-    padding-top: 50px;
+    padding-top: 50px
 }
 
 .degreea {
-    color: black;
+    color: #000
 }
 
 .country {
     font-size: 100px;
     font-weight: 700;
-    color: black;
+    color: #000
 }
 
 .city {
     font-size: 50px;
     font-weight: 500;
-    color: black;
+    color: #000
 }
 
 .tempdegree {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 .feel {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 25px
 }
 
 .feel>p {
-    font-size: 20px;
+    font-size: 20px
 }
 
-.infodiv,
-.InfoDiv {
+.InfoDiv,
+.infodiv {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 .degreeslider {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center
 }
 
-/* The switch - the box around the slider */
 .switch {
     position: relative;
     display: inline-block;
     width: 45px;
-    height: 26px;
+    height: 26px
 }
 
 .switchdiv {
-    padding: 0px 5px;
+    padding: 0 5px
 }
 
-/* Hide default HTML checkbox */
 .switch input {
     opacity: 0;
     width: 0;
-    height: 0;
+    height: 0
 }
 
-/* The slider */
 .slider {
     position: absolute;
     cursor: pointer;
@@ -259,9 +255,9 @@ hr {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #260450;
+    background-color: var(--purple);
     -webkit-transition: .4s;
-    transition: .4s;
+    transition: .4s
 }
 
 .slider:before {
@@ -271,38 +267,37 @@ hr {
     width: 17px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: #fff;
     -webkit-transition: .4s;
-    transition: .4s;
+    transition: .4s
 }
 
 input:checked+.slider {
-    background-color: rgb(231, 63, 98);
+    background-color: var(--pink)
 }
 
 input:focus+.slider {
-    box-shadow: 0 0 1px rgb(231, 63, 98);
+    box-shadow: 0 0 1px var(--pink)
 }
 
 input:checked+.slider:before {
     -webkit-transform: translateX(17px);
     -ms-transform: translateX(17px);
-    transform: translateX(17px);
+    transform: translateX(17px)
 }
 
-/* Rounded sliders */
 .slider.round {
-    border-radius: 34px;
+    border-radius: 34px
 }
 
 .slider.round:before {
-    border-radius: 50%;
+    border-radius: 50%
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width:600px) {
     body {
-        background-image: url(./icons/backgroundphone.png);
-        background-color: #260450;
+        background-image: url(icons/backgroundphone.png);
+        background-color: var(--purple)
     }
 
     .CurrentWeather {
@@ -311,44 +306,42 @@ input:checked+.slider:before {
         padding-right: 0;
         position: absolute;
         top: 20%;
-        right: 10%;
+        right: 10%
     }
 
     .weakTemp {
         backdrop-filter: none;
         position: absolute;
-
         left: 5%;
         right: 5%;
         top: 60%;
-
         margin: 0;
         padding: 10px 10px;
         display: grid;
         grid-template-columns: 350px;
         grid-template-rows: 130px 5px 130px;
-        grid-column-gap: 0px;
+        grid-column-gap: 0;
         grid-row-gap: 10px;
         min-width: 370px;
         max-height: 311px;
         max-width: 372px;
-        width: auto;
+        width: auto
     }
 
     .parent {
         display: grid;
         grid-template-columns: 120px 5px 120px 5px 120px;
         grid-template-rows: 130px;
-        grid-column-gap: 0px;
-        grid-row-gap: 10px;
+        grid-column-gap: 0;
+        grid-row-gap: 10px
     }
 
     .name {
-        font-size: 20px;
+        font-size: 20px
     }
 
     .dayicon {
-        width: 50px;
+        width: 50px
     }
 
     .xem {
@@ -360,7 +353,7 @@ input:checked+.slider:before {
         bottom: -65px;
         right: -25px;
         left: -25px;
-        z-index: -1;
+        z-index: -1
     }
 
     .xem1 {
@@ -372,54 +365,51 @@ input:checked+.slider:before {
         right: 0;
         left: 0;
         bottom: 0;
-        top: 0;
+        top: 0
     }
 
     .WeatherIcon {
         width: 150px;
-        height: 150px;
+        height: 150px
     }
 
     .InfoDiv {
         flex-direction: column;
-        color: black;
-        font-size: 16px;
+        color: #000;
+        font-size: 16px
     }
 
     .InfoDiv>hr {
-        display: none;
+        display: none
     }
 
     .CurrentTempc,
-    .hh,
     .feel>p,
+    .hh,
     .info {
-        color: black;
+        color: #000
     }
 
     .TempDiv>p {
-        font-size: 34px;
+        font-size: 34px
     }
 
     .blur {
         backdrop-filter: none;
-        border: 3px solid #260450;
+        border: 3px solid var(--purple)
     }
 
     .feel {
-        margin: 0;
+        margin: 0
     }
 }
 
-@media only screen and (max-width: 400px) {
-    body {
-        overflow: hidden;
-    }
+@media only screen and (max-width:400px) {
     .weakTemp {
         overflow-x: hidden;
-        bottom: 0.5%;
-        left: 0.5%;
-        right: 0.5%;
-        grid-template-columns: 350px;
+        bottom: .5%;
+        left: .5%;
+        right: .5%;
+        grid-template-columns: 350px
     }
 }
