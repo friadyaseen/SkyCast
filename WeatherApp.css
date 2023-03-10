@@ -413,3 +413,18 @@ input:checked+.slider:before {
         grid-template-columns: 350px
     }
 }
+
+@media only screen and (max-width:361px) {
+    .country {
+        font-size: 80px;
+    }
+
+    .weakTemp {
+        min-height: 320px;
+        min-width: 350px;
+    }
+
+    .parent {
+        grid-template-columns: 110px 5px 110px 5px 110px;
+    }
+}
