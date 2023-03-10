@@ -421,10 +421,14 @@ input:checked+.slider:before {
 
     .weakTemp {
         min-height: 320px;
-        min-width: 350px;
+        min-width: 150px;
+        grid-template-columns: 270px;
+        left: 8%;
+        right: 8%;
+        top: 60%;
     }
 
     .parent {
-        grid-template-columns: 110px 5px 110px 5px 110px;
+        grid-template-columns: 90px 5px 90px 5px 90px;
     }
 }
