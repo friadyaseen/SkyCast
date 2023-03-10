@@ -432,3 +432,37 @@ input:checked+.slider:before {
         grid-template-columns: 90px 5px 90px 5px 90px;
     }
 }
+
+@media only screen and (max-width:321px) {
+    .country {
+        font-size: 70px;
+    }
+
+    .city {
+        font-size: 40px;
+    }
+
+    .weakTemp {
+        grid-template-columns: 220px;
+        min-height: 310px;
+        overflow: hidden;
+        left: 10%;
+        right: 10%;
+    }
+
+    .dayicon {
+        width: 40px;
+    }
+
+    .name, .weather, .temp {
+        font-size: 16px;
+    }
+
+    .day {
+        justify-content: center;
+    }
+
+    .parent {
+        grid-template-columns: 70px 5px 70px 5px 70px;
+    }
+}
