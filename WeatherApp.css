@@ -442,6 +442,26 @@ input:checked+.slider:before {
         font-size: 40px;
     }
 
+    .WeatherIcon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .xem {
+        top: -33px;
+        bottom: -33px;
+        right: -19px;
+        left: -19px;
+    }
+
+    .TempDiv>p {
+        font-size: 26px;
+    }
+
+    .feel>p {
+        font-size: 16px;
+    }
+
     .weakTemp {
         grid-template-columns: 220px;
         min-height: 310px;
@@ -454,7 +474,9 @@ input:checked+.slider:before {
         width: 40px;
     }
 
-    .name, .weather, .temp {
+    .name,
+    .weather,
+    .temp {
         font-size: 16px;
     }
 
