@@ -1,0 +1,490 @@
+:root {
+    --pink: #e73f62;
+    --purple: #260450;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(icons/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--purple)
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-family: Lato, sans-serif;
+    color: #fff
+}
+
+hr {
+    margin: 5px;
+    border-color: var(--pink)
+}
+
+* {
+    box-sizing: border-box
+}
+
+.header {
+    width: 100%;
+    height: 48px;
+    border-bottom: 3px solid var(--pink);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.header1 {
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.webname {
+    font-size: 35px;
+    font-weight: 700
+}
+
+.xem1 {
+    position: absolute
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.weakTemp {
+    backdrop-filter: blur(4px);
+    display: grid;
+    grid-template-columns: 440px 5px 440px;
+    grid-template-rows: 170px;
+    grid-column-gap: 0;
+    grid-row-gap: 10px;
+    width: 885px;
+    padding: 10px 20px;
+    margin-top: 160px;
+    margin-left: 30px;
+    border: 3px solid var(--pink);
+    border-radius: 15px
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 140px 5px 140px 5px 140px;
+    grid-template-rows: 130px;
+    grid-column-gap: 0;
+    grid-row-gap: 10px
+}
+
+.hr {
+    max-height: 130px
+}
+
+.logodiv {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.logo {
+    width: 50px
+}
+
+.sky {
+    color: var(--pink)
+}
+
+.cast {
+    color: var(--purple)
+}
+
+.day {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column
+}
+
+.name {
+    font-size: 24px
+}
+
+.temp {
+    font-size: 30px
+}
+
+.weather {
+    font-size: 20px
+}
+
+.dayicon {
+    width: 90px
+}
+
+.dayinfo {
+    display: flex;
+    align-items: center;
+    flex-direction: column
+}
+
+.TempDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.hh {
+    font-size: 40px
+}
+
+.CurrentWeather {
+    height: 100%;
+    width: 450px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.weatherinfo {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.blur {
+    backdrop-filter: blur(4px);
+    border: 3px solid var(--pink);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column
+}
+
+.WeatherIcon {
+    width: 365px;
+    padding: 0;
+    margin: 0
+}
+
+.CurrentTempc {
+    font-size: 50px;
+    margin: 0;
+    padding: 0
+}
+
+.locationDiv {
+    padding-left: 20px;
+    padding-top: 50px
+}
+
+.degreea {
+    color: #000
+}
+
+.country {
+    font-size: 100px;
+    font-weight: 700;
+    color: #000
+}
+
+.city {
+    font-size: 50px;
+    font-weight: 500;
+    color: #000
+}
+
+.tempdegree {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.feel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px
+}
+
+.feel>p {
+    font-size: 20px
+}
+
+.InfoDiv,
+.infodiv {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.degreeslider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 26px
+}
+
+.switchdiv {
+    padding: 0 5px
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--purple);
+    -webkit-transition: .4s;
+    transition: .4s
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s
+}
+
+input:checked+.slider {
+    background-color: var(--pink)
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px var(--pink)
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(17px);
+    -ms-transform: translateX(17px);
+    transform: translateX(17px)
+}
+
+.slider.round {
+    border-radius: 34px
+}
+
+.slider.round:before {
+    border-radius: 50%
+}
+
+@media only screen and (max-width:600px) {
+    body {
+        background-image: url(icons/backgroundphone.png);
+        background-color: var(--purple)
+    }
+
+    .CurrentWeather {
+        height: 150px;
+        width: 100px;
+        padding-right: 0;
+        position: absolute;
+        top: 20%;
+        right: 10%
+    }
+
+    .weakTemp {
+        backdrop-filter: none;
+        position: absolute;
+        left: 5%;
+        right: 5%;
+        top: 60%;
+        margin: 0;
+        padding: 10px 10px;
+        display: grid;
+        grid-template-columns: 350px;
+        grid-template-rows: 130px 5px 130px;
+        grid-column-gap: 0;
+        grid-row-gap: 10px;
+        min-width: 370px;
+        max-height: 311px;
+        max-width: 372px;
+        width: auto
+    }
+
+    .parent {
+        display: grid;
+        grid-template-columns: 120px 5px 120px 5px 120px;
+        grid-template-rows: 130px;
+        grid-column-gap: 0;
+        grid-row-gap: 10px
+    }
+
+    .name {
+        font-size: 20px
+    }
+
+    .dayicon {
+        width: 50px
+    }
+
+    .xem {
+        position: absolute;
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        overflow: hidden;
+        top: -65px;
+        bottom: -65px;
+        right: -25px;
+        left: -25px;
+        z-index: -1
+    }
+
+    .xem1 {
+        position: absolute;
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        overflow: hidden;
+        z-index: -1;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 0
+    }
+
+    .WeatherIcon {
+        width: 150px;
+        height: 150px
+    }
+
+    .InfoDiv {
+        flex-direction: column;
+        color: #000;
+        font-size: 16px
+    }
+
+    .InfoDiv>hr {
+        display: none
+    }
+
+    .CurrentTempc,
+    .feel>p,
+    .hh,
+    .info {
+        color: #000
+    }
+
+    .TempDiv>p {
+        font-size: 34px
+    }
+
+    .blur {
+        backdrop-filter: none;
+        border: 3px solid var(--purple)
+    }
+
+    .feel {
+        margin: 0
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .weakTemp {
+        overflow-x: hidden;
+        bottom: .5%;
+        left: .5%;
+        right: .5%;
+        grid-template-columns: 350px
+    }
+}
+
+@media only screen and (max-width:361px) {
+    .country {
+        font-size: 80px;
+    }
+
+    .weakTemp {
+        min-height: 320px;
+        min-width: 150px;
+        grid-template-columns: 270px;
+        left: 8%;
+        right: 8%;
+        top: 60%;
+    }
+
+    .parent {
+        grid-template-columns: 90px 5px 90px 5px 90px;
+    }
+}
+
+@media only screen and (max-width:321px) {
+    .country {
+        font-size: 70px;
+    }
+
+    .city {
+        font-size: 40px;
+    }
+
+    .WeatherIcon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .xem {
+        top: -33px;
+        bottom: -33px;
+        right: -19px;
+        left: -19px;
+    }
+
+    .TempDiv>p {
+        font-size: 26px;
+    }
+
+    .feel>p {
+        font-size: 16px;
+    }
+
+    .weakTemp {
+        grid-template-columns: 220px;
+        min-height: 310px;
+        overflow: hidden;
+        left: 10%;
+        right: 10%;
+    }
+
+    .dayicon {
+        width: 40px;
+    }
+
+    .name,
+    .weather,
+    .temp {
+        font-size: 16px;
+    }
+
+    .day {
+        justify-content: center;
+    }
+
+    .parent {
+        grid-template-columns: 70px 5px 70px 5px 70px;
+    }
+}

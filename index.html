@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="WeatherApp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>SkyCast</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header1">
+            <div class="logodiv">
+                <img src="./icons/logo.svg" class="logo" alt="logo">
+                <p class="webname"><span class="sky">Sky</span><span class="cast">Cast</span></p>
+            </div>
+            <div class="degreeslider">
+                <p class="degreea">&#8451;</p>
+                <div class="switchdiv">
+                    <label class="switch">
+                        <input onclick="changedegree()" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <p class="degreea">&#8457;</p>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div>
+            <div class="locationDiv">
+                <p id="country" class="country"></p>
+                <p id="city" class="city"></p>
+            </div>
+            <div class="weakTemp">
+                <div class="xem1"></div>
+                <div class="parent">
+                    <div class="day">
+                        <p class="name">Today</p>
+                        <img src="" alt="cloud" class="dayicon" id="CurrentWeathericon">
+                        <div class="dayinfo">
+                            <p id="weather" class="weather"></p>
+                            <div class="tempdegree">
+                                <p id="CurrentTemp" class="temp"></p>
+                                <p id="degree" class="degree">&#8451;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="day">
+                        <p id="name1" class="name"></p>
+                        <img src="" alt="cloud" class="dayicon" id="weathericon1">
+                        <div class="dayinfo">
+                            <p id="weather1" class="weather"></p>
+                            <div class="tempdegree">
+                                <p id="temp1" class="temp"></p>
+                                <p id="degree1" class="degree">&#8451;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="day">
+                        <p id="name2" class="name"></p>
+                        <img src="" alt="cloud" class="dayicon" id="weathericon2">
+                        <div class="dayinfo">
+                            <p id="weather2" class="weather"></p>
+                            <div class="tempdegree">
+                                <p id="temp2" class="temp"></p>
+                                <p id="degree2" class="degree">&#8451;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="hr">
+                <div class="parent">
+                    <div class="day">
+                        <p id="name3" class="name"></p>
+                        <img src="" alt="cloud" class="dayicon" id="weathericon3">
+                        <div class="dayinfo">
+                            <p id="weather3" class="weather"></p>
+                            <div class="tempdegree">
+                                <p id="temp3" class="temp"></p>
+                                <p id="degree3" class="degree">&#8451;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="day">
+                        <p id="name4" class="name"></p>
+                        <img src="" alt="cloud" class="dayicon" id="weathericon4">
+                        <div class="dayinfo">
+                            <p id="weather4" class="weather"></p>
+                            <div class="tempdegree">
+                                <p id="temp4" class="temp"></p>
+                                <p id="degree4" class="degree">&#8451;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="day">
+                        <p id="name5" class="name"></p>
+                        <img src="" alt="cloud" class="dayicon" id="weathericon5">
+                        <div class="dayinfo">
+                            <p id="weather5" class="weather"></p>
+                            <div class="tempdegree">
+                                <p id="temp5" class="temp"></p>
+                                <p id="degree5" class="degree">&#8451;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="CurrentWeather">
+            <div class="weatherinfo">
+                <div class="xem"></div>
+                <div class="blur">
+                    <div>
+                        <img src="" alt="Cloud" class="WeatherIcon" id="CurrentWeathericon1">
+                    </div>
+                    <div class="InfoDiv">
+                        <div>
+                            <div class="TempDiv">
+                                <p id="CurrentTemp1" class="CurrentTempc"></p>
+                                <p id="degreee" class="hh">&#8451;</p>
+                            </div>
+                            <div class="feel">
+                                <p>Feels Like&nbsp;</p>
+                                <p id="feel"></p>
+                                <p id="degreea">&#8451;</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <hr>
+                        <div>
+                            <div class="infodiv">
+                                <p class="info">Humidity:&nbsp;</p>
+                                <p id="humi" class="info"></p>
+                            </div>
+                            <div class="infodiv">
+                                <p class="info">Wind:&nbsp;</p>
+                                <p id="wind" class="info"></p>
+                            </div>
+                            <div class="infodiv">
+                                <p class="info">Pressure:&nbsp;</p>
+                                <p id="pres" class="info"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="WeatherApp.js"></script>
+
+</html>
