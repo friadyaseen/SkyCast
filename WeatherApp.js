@@ -47,16 +47,16 @@ function GetWeather(positon) {
 function GetCurrentWeather(currentweather) {
 
   let tempnaw = Math.round(currentweather.main.temp - 273);
-
+  
+  document.getElementById("tempnow").innerText = tempnaw;
   document.getElementById("CurrentTemp").innerText = tempnaw;
-  document.getElementById("CurrentTemp1").innerText = tempnaw;
 
   document.getElementById("CurrentWeathericon").src = "./icons/" + currentweather.weather[0].icon.replace(/(n)|(d)/, '') + ".svg";
-  document.getElementById("CurrentWeathericon1").src = "./icons/" + currentweather.weather[0].icon.replace(/(n)|(d)/, '') + ".svg";
+  document.getElementById("cicon").src = "./icons/" + currentweather.weather[0].icon.replace(/(n)|(d)/, '') + ".svg";
 
   document.getElementById('weather').innerText = currentweather.weather[0].main;
 
-  document.getElementById("feel").innerText = Math.round(currentweather.main.feels_like - 273);
+  document.getElementById("feelnow").innerText = Math.round(currentweather.main.feels_like - 273);
 
 
   document.getElementById("pres").innerText = currentweather.main.pressure + "hPa";
@@ -67,7 +67,7 @@ function GetCurrentWeather(currentweather) {
 
 //set weather forcast data to html
 function SetWeakTemp(weatherFor) {
-  let j = 1;
+  let j = 0;
   for (i = 0; i < weatherFor.list.length; i++) {
     let time = String(weatherFor.list[i].dt_txt)
     if (time.includes("12:00:00")) {
@@ -129,33 +129,35 @@ function changedegree() {
 
 // set C to F
 function tofahrenheit() {
-  for (i = 1; i < 6; i++) {
-    document.getElementById('temp' + i).innerText = Math.round((document.getElementById('temp' + i).innerText) * (9 / 5) + 32);
-    document.getElementById('degree' + i).innerHTML = "&#8457;";
+  for (i = 0; i < 8; i++) {
+    if(i < 5)
+    {
+      document.getElementById('temp' + i).innerText = Math.round((document.getElementById('temp' + i).innerText) * (9 / 5) + 32);
+    }
+    document.getElementById("cdegree" + i).innerHTML = "&#8457;";
   }
+  document.getElementById('tempnow').innerText = Math.round((document.getElementById('tempnow').innerText) * (9 / 5) + 32);
+
   document.getElementById('CurrentTemp').innerText = Math.round((document.getElementById('CurrentTemp').innerText) * (9 / 5) + 32);
-  document.getElementById('degree').innerHTML = "&#8457;";
 
-  document.getElementById('CurrentTemp1').innerText = Math.round((document.getElementById('CurrentTemp1').innerText) * (9 / 5) + 32);
-  document.getElementById('degreee').innerHTML = "&#8457;";
 
-  document.getElementById('feel').innerText = Math.round((document.getElementById('feel').innerText) * (9 / 5) + 32);
-  document.getElementById('degreea').innerHTML = "&#8457;";
+  document.getElementById('feelnow').innerText = Math.round((document.getElementById('feelnow').innerText) * (9 / 5) + 32);
 }
 
 
 //Set F to C
 function tocelsius() {
-  for (i = 1; i < 6; i++) {
-    document.getElementById('temp' + i).innerText = Math.round(((document.getElementById('temp' + i).innerText) - 32) * (5 / 9));
-    document.getElementById('degree' + i).innerHTML = "&#8451;";
+  for (i = 0; i < 8; i++) {
+    if(i < 5)
+    {
+
+      document.getElementById('temp' + i).innerText = Math.round(((document.getElementById('temp' + i).innerText) - 32) * (5 / 9));
+    }
+    document.getElementById("cdegree" + i).innerHTML = "&#8451;";
   }
+  document.getElementById('tempnow').innerText = Math.round(((document.getElementById('tempnow').innerText) - 32) * (5 / 9));
+
   document.getElementById('CurrentTemp').innerText = Math.round(((document.getElementById('CurrentTemp').innerText) - 32) * (5 / 9));
-  document.getElementById('degree').innerHTML = "&#8451;";
 
-  document.getElementById('CurrentTemp1').innerText = Math.round(((document.getElementById('CurrentTemp1').innerText) - 32) * (5 / 9));
-  document.getElementById('degreee').innerHTML = "&#8451;";
-
-  document.getElementById('feel').innerText = Math.round(((document.getElementById('feel').innerText) - 32) * (5 / 9));
-  document.getElementById('degreea').innerHTML = "&#8451;";
+  document.getElementById('feelnow').innerText = Math.round(((document.getElementById('feelnow').innerText) - 32) * (5 / 9));
 }

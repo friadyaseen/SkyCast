@@ -53,14 +53,9 @@ hr {
     position: absolute
 }
 
-.main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center
-}
 
 .weakTemp {
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(5px);
     display: grid;
     grid-template-columns: 440px 5px 440px;
     grid-template-rows: 170px;
@@ -133,58 +128,6 @@ hr {
     flex-direction: column
 }
 
-.TempDiv {
-    display: flex;
-    align-items: center;
-    justify-content: center
-}
-
-.hh {
-    font-size: 40px
-}
-
-.CurrentWeather {
-    height: 100%;
-    width: 450px;
-    padding-right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center
-}
-
-.weatherinfo {
-    display: flex;
-    justify-content: center;
-    align-items: center
-}
-
-.blur {
-    backdrop-filter: blur(4px);
-    border: 3px solid var(--pink);
-    border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column
-}
-
-.WeatherIcon {
-    width: 365px;
-    padding: 0;
-    margin: 0
-}
-
-.CurrentTempc {
-    font-size: 50px;
-    margin: 0;
-    padding: 0
-}
-
-.locationDiv {
-    padding-left: 20px;
-    padding-top: 50px
-}
-
 .degreea {
     color: #000
 }
@@ -202,24 +145,6 @@ hr {
 }
 
 .tempdegree {
-    display: flex;
-    justify-content: center;
-    align-items: center
-}
-
-.feel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 25px
-}
-
-.feel>p {
-    font-size: 20px
-}
-
-.InfoDiv,
-.infodiv {
     display: flex;
     justify-content: center;
     align-items: center
@@ -487,4 +412,74 @@ input:checked+.slider:before {
     .parent {
         grid-template-columns: 70px 5px 70px 5px 70px;
     }
+}
+
+
+.cweather {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    min-height: 200px;
+    width: 350px;
+    height: 420px;
+    backdrop-filter: blur(5px);
+    border: 3px solid var(--pink);
+    border-radius: 15px;
+}
+
+.cinfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ctemp {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    
+}
+
+.cicon {
+    width: 300px;
+}
+
+.cdegree {
+    font-size: 50px;
+}
+.cfeel {
+    font-size: 22px;
+}
+
+.cpwh > p {
+    font-size: 18px;
+}
+
+.cpw {
+    padding-bottom: 3px;
+}
+
+.cline {
+    margin: 0px 10px;
+}
+
+
+.cline > div {
+    height: 60px;
+    width: 10px;
+
+    border-left: 2px solid var(--pink);
+    border-right: 2px solid var(--pink);
+
+}
+
+.con {
+    font-size: 25px;
+}
+.con1 {
+    font-size: 18px;
 }
