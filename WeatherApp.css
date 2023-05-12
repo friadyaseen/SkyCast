@@ -19,11 +19,6 @@ p {
     color: #fff
 }
 
-hr {
-    margin: 5px;
-    border-color: var(--pink)
-}
-
 * {
     box-sizing: border-box
 }
@@ -49,38 +44,6 @@ hr {
     font-weight: 700
 }
 
-.xem1 {
-    position: absolute
-}
-
-
-.weakTemp {
-    backdrop-filter: blur(5px);
-    display: grid;
-    grid-template-columns: 440px 5px 440px;
-    grid-template-rows: 170px;
-    grid-column-gap: 0;
-    grid-row-gap: 10px;
-    width: 885px;
-    padding: 10px 20px;
-    margin-top: 160px;
-    margin-left: 30px;
-    border: 3px solid var(--pink);
-    border-radius: 15px
-}
-
-.parent {
-    display: grid;
-    grid-template-columns: 140px 5px 140px 5px 140px;
-    grid-template-rows: 130px;
-    grid-column-gap: 0;
-    grid-row-gap: 10px
-}
-
-.hr {
-    max-height: 130px
-}
-
 .logodiv {
     display: flex;
     justify-content: center;
@@ -97,35 +60,6 @@ hr {
 
 .cast {
     color: var(--purple)
-}
-
-.day {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column
-}
-
-.name {
-    font-size: 24px
-}
-
-.temp {
-    font-size: 30px
-}
-
-.weather {
-    font-size: 20px
-}
-
-.dayicon {
-    width: 90px
-}
-
-.dayinfo {
-    display: flex;
-    align-items: center;
-    flex-direction: column
 }
 
 .degreea {
@@ -150,11 +84,6 @@ hr {
     color: #000
 }
 
-.tempdegree {
-    display: flex;
-    justify-content: center;
-    align-items: center
-}
 
 .degreeslider {
     display: flex;
@@ -225,200 +154,6 @@ input:checked+.slider:before {
     border-radius: 50%
 }
 
-@media only screen and (max-width:600px) {
-    body {
-        background-image: url(icons/backgroundphone.png);
-        background-color: var(--purple)
-    }
-
-    .CurrentWeather {
-        height: 150px;
-        width: 100px;
-        padding-right: 0;
-        position: absolute;
-        top: 20%;
-        right: 10%
-    }
-
-    .weakTemp {
-        backdrop-filter: none;
-        position: absolute;
-        left: 5%;
-        right: 5%;
-        top: 60%;
-        margin: 0;
-        padding: 10px 10px;
-        display: grid;
-        grid-template-columns: 350px;
-        grid-template-rows: 130px 5px 130px;
-        grid-column-gap: 0;
-        grid-row-gap: 10px;
-        min-width: 370px;
-        max-height: 311px;
-        max-width: 372px;
-        width: auto
-    }
-
-    .parent {
-        display: grid;
-        grid-template-columns: 120px 5px 120px 5px 120px;
-        grid-template-rows: 130px;
-        grid-column-gap: 0;
-        grid-row-gap: 10px
-    }
-
-    .name {
-        font-size: 20px
-    }
-
-    .dayicon {
-        width: 50px
-    }
-
-    .xem {
-        position: absolute;
-        backdrop-filter: blur(10px);
-        border-radius: 15px;
-        overflow: hidden;
-        top: -65px;
-        bottom: -65px;
-        right: -25px;
-        left: -25px;
-        z-index: -1
-    }
-
-    .xem1 {
-        position: absolute;
-        backdrop-filter: blur(10px);
-        border-radius: 15px;
-        overflow: hidden;
-        z-index: -1;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        top: 0
-    }
-
-    .WeatherIcon {
-        width: 150px;
-        height: 150px
-    }
-
-    .InfoDiv {
-        flex-direction: column;
-        color: #000;
-        font-size: 16px
-    }
-
-    .InfoDiv>hr {
-        display: none
-    }
-
-    .CurrentTempc,
-    .feel>p,
-    .hh,
-    .info {
-        color: #000
-    }
-
-    .TempDiv>p {
-        font-size: 34px
-    }
-
-    .blur {
-        backdrop-filter: none;
-        border: 3px solid var(--purple)
-    }
-
-    .feel {
-        margin: 0
-    }
-}
-
-@media only screen and (max-width:400px) {
-    .weakTemp {
-        overflow-x: hidden;
-        bottom: .5%;
-        left: .5%;
-        right: .5%;
-        grid-template-columns: 350px
-    }
-}
-
-@media only screen and (max-width:361px) {
-    .country {
-        font-size: 80px;
-    }
-
-    .weakTemp {
-        min-height: 320px;
-        min-width: 150px;
-        grid-template-columns: 270px;
-        left: 8%;
-        right: 8%;
-        top: 60%;
-    }
-
-    .parent {
-        grid-template-columns: 90px 5px 90px 5px 90px;
-    }
-}
-
-@media only screen and (max-width:321px) {
-    .country {
-        font-size: 70px;
-    }
-
-    .city {
-        font-size: 40px;
-    }
-
-    .WeatherIcon {
-        width: 100px;
-        height: 100px;
-    }
-
-    .xem {
-        top: -33px;
-        bottom: -33px;
-        right: -19px;
-        left: -19px;
-    }
-
-    .TempDiv>p {
-        font-size: 26px;
-    }
-
-    .feel>p {
-        font-size: 16px;
-    }
-
-    .weakTemp {
-        grid-template-columns: 220px;
-        min-height: 310px;
-        overflow: hidden;
-        left: 10%;
-        right: 10%;
-    }
-
-    .dayicon {
-        width: 40px;
-    }
-
-    .name,
-    .weather,
-    .temp {
-        font-size: 16px;
-    }
-
-    .day {
-        justify-content: center;
-    }
-
-    .parent {
-        grid-template-columns: 70px 5px 70px 5px 70px;
-    }
-}
 
 
 .cweather {
