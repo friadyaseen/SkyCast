@@ -132,6 +132,12 @@ hr {
     color: #000
 }
 
+.locationDiv {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+}
+
 .country {
     font-size: 100px;
     font-weight: 700;
@@ -417,7 +423,7 @@ input:checked+.slider:before {
 
 .cweather {
     position: absolute;
-    top: 50px;
+    top: 75px;
     right: 50px;
     display: flex;
     flex-direction: column;
@@ -440,8 +446,8 @@ input:checked+.slider:before {
 .ctemp {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    
+    align-items: center;
+
 }
 
 .cicon {
@@ -451,11 +457,12 @@ input:checked+.slider:before {
 .cdegree {
     font-size: 50px;
 }
+
 .cfeel {
     font-size: 22px;
 }
 
-.cpwh > p {
+.cpwh>p {
     font-size: 18px;
 }
 
@@ -468,7 +475,7 @@ input:checked+.slider:before {
 }
 
 
-.cline > div {
+.cline>div {
     height: 60px;
     width: 10px;
 
@@ -480,6 +487,61 @@ input:checked+.slider:before {
 .con {
     font-size: 25px;
 }
+
 .con1 {
+    font-size: 18px;
+}
+
+
+
+.wtemp {
+    position: absolute;
+    top: 450px;
+    left: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 3px solid var(--pink);
+    border-radius: 15px;
+
+    backdrop-filter: blur(5px);
+}
+
+.wday {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 135px;
+}
+
+.wline {
+    height: 150px;
+
+    border: 1.5px solid var(--pink);
+
+    border-radius: 15px;
+}
+
+.wname {
+    font-size: 24px;
+}
+
+.wdayicon {
+    width: 90px;
+}
+
+.wweather {
+    font-size: 20px;
+}
+
+.wt {
+    font-size: 30px;
+}
+
+.wdegree {
     font-size: 18px;
 }

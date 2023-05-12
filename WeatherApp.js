@@ -68,9 +68,9 @@ function GetCurrentWeather(currentweather) {
 //set weather forcast data to html
 function SetWeakTemp(weatherFor) {
   let j = 0;
-  for (i = 0; i < weatherFor.list.length; i++) {
+  for (i = 1; i < weatherFor.list.length; i++) {
     let time = String(weatherFor.list[i].dt_txt)
-    if (time.includes("12:00:00")) {
+    if (time.includes("00:00:00")) {
       document.getElementById('name' + j).innerText = Getdate(i, weatherFor);
       document.getElementById('temp' + j).innerText = Math.round(weatherFor.list[i].main.temp - 273);
       document.getElementById('weather' + j).innerText = weatherFor.list[i].weather[0].main;
@@ -85,19 +85,19 @@ function SetWeakTemp(weatherFor) {
 function Getdate(i, weatherFor) {
   let date = new Date(weatherFor.list[i].dt * 1000);
   switch (date.getDay()) {
-    case 0:
-      return ("Saturday")
-    case 1:
-      return ("Sunday")
-    case 2:
-      return ("Monday")
-    case 3:
-      return ("Tuesday")
-    case 4:
-      return ("Wednesday")
-    case 5:
-      return ("Thursday")
     case 6:
+      return ("Saturday")
+    case 0:
+      return ("Sunday")
+    case 1:
+      return ("Monday")
+    case 2:
+      return ("Tuesday")
+    case 3:
+      return ("Wednesday")
+    case 4:
+      return ("Thursday")
+    case 5:
       return ("Friday")
   }
 }
