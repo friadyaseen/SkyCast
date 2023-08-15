@@ -12,7 +12,7 @@ function GetWeather(positon) {
   lon = Math.round(positon.coords.longitude);
 
   //get current weather data
-  fetch("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=d683d4ce2bb76c53f54bda835a48260c")
+  fetch("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=ec6923fa6f421654de2ae7c1f14a9d5f")
     .then(response =>
       response.json().then(data => ({
         data: data,
@@ -22,7 +22,7 @@ function GetWeather(positon) {
       }));
 
   //get weather forcast data
-  fetch("https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=d683d4ce2bb76c53f54bda835a48260c")
+  fetch("https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=ec6923fa6f421654de2ae7c1f14a9d5f")
     .then(response =>
       response.json().then(data => ({
         data: data,
@@ -32,7 +32,7 @@ function GetWeather(positon) {
       }));
 
   //get country and city name
-  fetch("https://us1.locationiq.com/v1/reverse?key=pk.c006302e4e7295adba0bed3dfdf5297b&lat=" + positon.coords.latitude + "&lon=" + positon.coords.longitude + "&format=json")
+  fetch("https://us1.locationiq.com/v1/reverse?key=pk.0d3d8947eac12fb7742af940242e9ff5&lat=" + positon.coords.latitude + "&lon=" + positon.coords.longitude + "&format=json")
     .then(response =>
       response.json().then(data => ({
         data: data,
