@@ -70,7 +70,7 @@ function SetWeakTemp(weatherFor) {
   let j = 0;
   for (i = 1; i < weatherFor.list.length; i++) {
     let time = String(weatherFor.list[i].dt_txt)
-    if (time.includes("00:00:00")) {
+    if (time.includes("12:00:00")) {
       document.getElementById('name' + j).innerText = Getdate(i, weatherFor);
       document.getElementById('temp' + j).innerText = Math.round(weatherFor.list[i].main.temp - 273);
       document.getElementById('weather' + j).innerText = weatherFor.list[i].weather[0].main;
